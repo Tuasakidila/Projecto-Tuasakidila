@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: grid;
+}
+a, li{
+    list-style: none;
+    text-decoration: none;
+}
+a{
+    opacity: 0.9px;
+}
+a:hover{
+    opacity: 1px;
+}
+
+/*Cabelçalho*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    gap: 10px;
+}
+header div p{
+    color: rgb(86, 178, 9);
+    font-size: 15px;
+}
+header nav{
+    display: flex;
+}
+header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-right:15px;
+}
+header nav li a{
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: rgb(116, 112, 113);
+    border: 1px solid;
+}
+header nav li:first-child a{
+    background-color: rgb(78, 198, 111);
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+}
+header button{ 
+    display: none;
+    cursor: pointer;
+    border: none;
+    background-color:transparent ;
+    padding: 10 15px;  
+    margin-right: 10px;
+    color: rgb(78, 198, 111);
+ }
+ header  button s { 
+    font-size: 2rem;
+ }
+
+/*Cabeçalho para telefone*/
+
+.mobile_menu{
+    display: none;
+    position: absolute;
+    background-color: rgb(75, 198, 107);;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    right: 0;
+    top: 50px;
+    padding: 20px;
+    width: 300px;
+    z-index: 1px;
+}
+.mobile_menu ul{
+    display: grid;
+    gap: 25px;
+}
+.mobile_menu li a{
+    background-color: #fff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    color: rgb(116, 112, 113);
+    border: 1px solid;
+}
+.mobile_menu li:first-child a{
+    background-color: rgb(78, 198, 111);
+    padding: 10px 16px 10px 16px;
+    border-radius: 10px;
+    color: #fff;
+}
+.open{
+    display: grid;
+}
+@media(max-width:700px){
+    .mobile_menu{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .mobile_menu li a{
+        background-color: transparent;
+        border: none;
+        color: #fff;
+    }
+    .mobile_menu li a:hover{
+        background-color: #fff;
+        color: rgb(86, 178, 9);
+    }
+    header nav{
+        display: none;
+    }
+    header button{
+        display: block;
+    }
+}
+
+
+/*World-Better*/
+
+#World-Better{
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
+#World-Better div{
+    width:30%;
+    gap: 10px;
+    display: grid;
+}
+#World-Better div h2{
+    font-size: 30px;
+    color: #000;
+}
+#World-Better div p{
+    font-size: 15px;
+    color: #000;
+    text-align: center;
+    width: 275px;
+}
+#World-Better .img{
+    width: 60%;
+    display: grid;
+}
+#World-Better .img img{
+    width: 80%;
+    justify-self: center;
+}
+@media(max-width:430px){
+    #World-Better .img{
+        display: none;
+    }
+    #World-Better div{
+        width: 90%;
+    }
+    #World-Better div p{
+        text-align: start;
+    }
+    #World-Better div h2{
+        font-size: 20px;
+    }
+    #World-Better div p{
+        width: 100%;
+        font-size: 13px;
+    }
+}
+
+/*Recycle*/
+
+#Recycle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    justify-self: center;
+    gap: 10px;
+    background-color: rgb(213, 242, 222);
+    padding: 20px;
+    margin-top: 50px;
+    width: 98%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#Recycle div{
+    display: grid;
+    align-items: center;
+    padding: 8px;
+    gap: 10px;
+    border-radius: 10px;
+    width: 20%;
+    height: 150px;
+    background-color: #fff;
+}
+#Recycle div img{
+    width: 80%;
+    background-color: #000;
+}
+#Recycle div p{
+    font-size: 15px;
+    margin-left: 20px;
+}
+#Recycle div p b{
+    font-size: 20px;
+    margin-left: -5px;
+    color: #000;
+}
+@media(max-width:980px){
+    #Recycle div{
+        width: 33%;
+    }
+
+}
+@media(max-width:625px){
+    #Recycle{
+        display: grid;
+    }
+    #Recycle div{
+        width: 150%;
+        justify-self: center;
+    }
+}
+@media(max-width:430px){  
+    #Recycle div{
+        width: 100%;
+    }
+}
+
+/*Rodapé*/
+
+footer{
+    background-color: rgb(243, 243, 243);
+    display: grid;
+    gap: 10px;
+    width: 98%;
+    align-items: center;
+    justify-self: center;
+    
+}
+footer .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer .p{
+    display: none;
+    color: #000;
+    font-size: 15px;
+}
+footer div{
+    display: grid;
+    gap: 5px;
+}
+footer div a{
+    color: #000;
+    font-size: 15px;
+}
+footer div a:first-child{
+    margin-top: 15px;
+}
+footer div a:last-child{
+    margin-bottom: 15px;
+}
+footer .all .p-in{
+    color: #000;
+    font-size: 15px;
+}
+footer .all div{
+    display: flex;
+    gap: 10px;
+}
+footer .all div p{
+    color: rgb(86, 178, 9);
+    font-size: 15px;
+}
+footer .links ul{
+    display: flex;
+    gap: 15px;
+}
+footer .links ul li{
+    background-color: rgb(179, 224, 191);
+    padding: 10px;
+    border-radius: 50px;
+}
+footer .links ul a{
+    font-size: 20px;
+    color: rgb(75, 198, 107);
+}
+@media(max-width:600px){
+    footer .main{
+        display: grid;
+    }
+    footer .all .p-in{
+        display: none;
+    }
+    footer .links{
+        justify-self: center;
+    }
+    footer .p{
+        display: block;
+        text-align: center;
+        margin: 10px 0 15px 0;
+    }
+    footer .all{
+        justify-self: center;
+    }
+}
